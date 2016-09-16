@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script src="target.js"></script>
+		<script src="parser.js"></script>
+		<script src="parser1_1.js"></script>
+		<script src="parser1_2.js"></script>
+		<script src="parser1_3.js"></script>
+	</head>
+	<body>
+		<script>
+			var test1 = '134297381';
+			var test2 = '011011100';
+			var test3 = 'aaBBBcC';
+
+			var target1 = new Target(test1);
+			var parse1 = new Parser1_1(target1);
+			var answer1 = parse1.output();
+			document.write('1-1 : The most longest increase substring in ' + test1 + ' is ' + answer1.strings + '<br>');
+
+
+			var target2 = new Target(test2);
+			var parse2 = new Parser1_2(target2);
+			var answer2 = parse2.output();
+			document.write('1-2 : The most longest same value substring in ' + test2 + ' is ' + answer2.strings + '<br>');
+
+
+			var target3 = new Target(test3);
+			var parse3 = new Parser1_3(target3);
+			var answer3 = parse3.output();
+			document.write('1-3 : The most longest same string substring in ' + test3 + ' is ' + answer3.strings + '<br>');
+
+		</script>
+	</body>
+</html>
